@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RockPaperScissors_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" backgroundImage="bg" contentMode="scaleAspectFill" id="gNe-yp-eaC">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="kVB-uZ-ARu">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Choose one:" id="h0e-G7-TDv">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                        </label>
+                                        <group width="1" alignment="left" verticalAlignment="center" id="ARk-3P-jQ2">
+                                            <items>
+                                                <button width="0.29999999999999999" alignment="center" verticalAlignment="center" title="✊" id="dHC-E4-815">
+                                                    <connections>
+                                                        <action selector="choseRock" destination="AgC-eL-Hgc" id="WQW-zQ-7mx"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="0.29999999999999999" alignment="center" verticalAlignment="center" title="✋" id="Z9B-4b-Les">
+                                                    <connections>
+                                                        <action selector="chosePaper" destination="AgC-eL-Hgc" id="nDG-fb-kw6"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="0.29999999999999999" alignment="center" verticalAlignment="center" title="🖖" id="ZEB-OF-QqT">
+                                                    <connections>
+                                                        <action selector="choseScissors" destination="AgC-eL-Hgc" id="OCH-wZ-caL"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="37" y="236"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="uK6-ZS-aMb">
+            <objects>
+                <controller identifier="Result" fullScreen="YES" id="qik-nj-ZUX" customClass="ResultInterfaceController" customModule="RockPaperScissors_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" backgroundImage="win" layout="vertical" id="Gkq-fh-bnK">
+                            <items>
+                                <group width="1" height="0.59999999999999998" alignment="left" layout="vertical" id="BFw-Kf-NQY">
+                                    <items>
+                                        <group width="0.80000000000000004" height="0.29999999999999999" alignment="center" verticalAlignment="center" id="G95-fI-tBP">
+                                            <items>
+                                                <label alignment="left" verticalAlignment="bottom" text="You" textAlignment="center" id="E4P-vY-ffC"/>
+                                                <label alignment="right" verticalAlignment="bottom" text="CPU" textAlignment="center" id="onv-qe-aZP"/>
+                                            </items>
+                                        </group>
+                                        <separator width="0.90000000000000002" alignment="center" verticalAlignment="center" id="VXB-Zi-Y64"/>
+                                        <group width="0.84999999999999998" alignment="center" verticalAlignment="center" id="g6f-on-7PD">
+                                            <items>
+                                                <label alignment="left" text="✊" id="UeQ-zI-RxT">
+                                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                                </label>
+                                                <label alignment="right" text="🖖" id="dfP-K9-0Rl">
+                                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <label width="1" alignment="center" verticalAlignment="center" text="You Win!" textAlignment="center" id="AiG-at-GGV">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="CPUchoiceLabel" destination="dfP-K9-0Rl" id="MI0-Im-jpy"/>
+                        <outlet property="bgGroup" destination="Gkq-fh-bnK" id="pDr-yP-8ZR"/>
+                        <outlet property="playerChoiceLabel" destination="UeQ-zI-RxT" id="a7i-vt-9XF"/>
+                        <outlet property="resultLabel" destination="AiG-at-GGV" id="YJf-zM-QJ0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="437" y="144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="272" height="340"/>
+        <image name="win" width="272" height="340"/>
+    </resources>
+</document>
